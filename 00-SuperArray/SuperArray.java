@@ -59,8 +59,15 @@ import java.util.Arrays;
 }//end second add method
 
   public void grow(int n){
-     int growSize = this.array.length;
-      this.array = new int[growSize + n];;
+      int [] array2 = new int[array.length + n];
+
+      for (int i = 0; i < array.length; i++) {
+           array2[i] = array[i];
+       }
+       array = new int[n];
+       array = array2;
+       array = new int[array2.length]; // grow array size
+       array = array2; // set values back
   } //end grow method
 
   public void set(int i, int val){
@@ -80,7 +87,11 @@ import java.util.Arrays;
     } //end isEmpty method
 
   public void remove(int index) {
+    int [] array2 = new int[array.length-1]; // temp array
 
+    for (int i = 0; i < array.length; i++) {
+         array2[i] = array[i];
+     }
   } //end remove method
 
   public String toString() {
