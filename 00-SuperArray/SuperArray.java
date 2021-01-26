@@ -60,7 +60,7 @@ import java.util.Arrays;
 
   public void grow(int n){
      int growSize = this.array.length;
-    int [] array = new int [n + growSize];
+      this.array = new int[growSize + n];;
   } //end grow method
 
   public void set(int i, int val){
