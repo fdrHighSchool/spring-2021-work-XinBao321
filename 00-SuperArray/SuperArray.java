@@ -13,6 +13,7 @@ import java.util.Arrays;
   } //end specific size array
 
   public SuperArray(){
+    //Defult numbers inside an array
     this.array = new int[10];
   } //end superarray
 
@@ -37,37 +38,27 @@ import java.util.Arrays;
     } //end first add method
 
   public void add(int index, int val){
+    int []array2 = new int[array.length + 1];
 
-    for(int i = 0; i < array.length; i++){
-        int number = array[index];
-
-      if(this.array[index] != 0) {
-        this.array[index] = val;
+        for (int i = 0; i < index; i++) {
+            array2[i] = array[i];
         }
-        /*Still trying to figure it out
-        //System.out.println(number);
-        int [] array2 = new int[array.length + 1];
-        //array2[i] = array[i];
-        array2[index] = number;
-        array2[array2.length - 1] = val;
-        array = new int[array2.length];
-        array = array2;
-      }
-      */
-}
+        array2[index] = val; // put value in specific index
 
+        for (int i = index; i < array.length; i++) {
+            array2[i + 1] = array[i];
+        }
+        array = new int[array2.length]; // increased the array
+        array = array2;
 }//end second add method
 
   public void grow(int n){
       int [] array2 = new int[array.length + n];
-
+      //Copying all values
       for (int i = 0; i < array.length; i++) {
            array2[i] = array[i];
        }
-       array = new int[n];
-       array = array2;
-       array = new int[array2.length]; // grow array size
-       array = array2; // set values back
+       this.array = array2;
   } //end grow method
 
   public void set(int i, int val){
@@ -78,6 +69,7 @@ import java.util.Arrays;
   } //end set method
 
   public boolean isEmpty() {
+    //Check if the array have any numbers
     for (int i = 0; i < array.length; i++) {
           if(array[i] != 0) {
             return false;
@@ -87,11 +79,12 @@ import java.util.Arrays;
     } //end isEmpty method
 
   public void remove(int index) {
-    int [] array2 = new int[array.length-1]; // temp array
-
-    for (int i = 0; i < array.length; i++) {
-         array2[i] = array[i];
-     }
+    if (index < this.numberCount) {
+      for (int i = index; i < this.numberCount - 1; i++) {
+        this.array[i] = this.array[i + 1];
+      } //end for loop
+      this.numberCount--;
+    }
   } //end remove method
 
   public String toString() {

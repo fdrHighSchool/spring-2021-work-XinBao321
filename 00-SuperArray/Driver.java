@@ -16,9 +16,12 @@ public class Driver{
 
     System.out.println(array1);
     array1.add(3,661);
+    array1.add(5,21);
     System.out.println(array1);
     array1.grow(2);
     array1.set(1,900);
+    array1.remove(4);
+    array1.remove(9);
     System.out.println(array1);
     System.out.println(array1.isEmpty());
   } //end main
