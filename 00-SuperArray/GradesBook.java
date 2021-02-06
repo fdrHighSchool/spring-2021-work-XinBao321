@@ -5,28 +5,62 @@ import java.util.Arrays;
 
 
       //instance variables
-      SuperArray exams;
-      SuperArray participation;
-      SuperArray project;
-      SuperArray homework;
-      SuperArray classwork;
+    private  SuperArray exams;
+    private  SuperArray participation;
+    private  SuperArray project;
+    private  SuperArray homework;
+    private  SuperArray classwork;
 
     public GradesBook(){
-      this.exams = new SuperArray;
-      this.participation = new SuperArray;
-      this.project = new SuperArray;
-      this.homework = new SuperArray;
-      this.classwork = new SuperArray;
+      this.exams = new SuperArray();
+      this.participation = new SuperArray();
+      this.project = new SuperArray();
+      this.homework = new SuperArray();
+      this.classwork = new SuperArray();
     }
 
+    public void addExams(int val){
+      this.exams.add(val);
+    } //end addExams
 
 
+    public void deleteExams(int val){
+      this.exams.remove(val);
+    } //end deleteExams
 
-  public void fillArray() {
-        for (int i = 0; i < this.array.length; i++) {
-          this.array[i] = (int)(Math.random() * 46 + 55);
-         }// end for loop
-       }// end fillArray method
+    public void addParticipation(int val){
+      this.participation.add(val);
+    } //end addParticipation
 
+    public String displayExams(){
+       return this.exams.toString();
+    } //end displayExams
+    public void setExams(int i, int val){
 
+      this.exams.set(i, val);
+    } // end set exams
+
+    public int calculateExams(){
+      int sum = 0;
+
+      for(int i = 0; i < this.exams.getSize(); i++){
+         sum += this.exams.getValue(i);
+         //System.out.println(sum);
+
+      } //end for loop
+
+        return sum / this.exams.getSize();
+    } //end calculateExams
+
+    public int getHighestExams(){
+      int highestGrade = this.exams.getValue(1);
+       for(int i = 0; i < this.exams.getSize(); i++ ){
+        for(int grade = this.exams.getValue(0); grade < 10; grade++){
+           System.out.println(grade);
+          if(grade > highestGrade)
+           highestGrade = grade;
+        }
+       }
+       return highestGrade;
+    }
   } //end class

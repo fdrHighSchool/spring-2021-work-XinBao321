@@ -86,8 +86,14 @@ import java.util.Arrays;
       this.numberCount--;
     }
   } //end remove method
-
+  public int getValue(int index) {
+       return array[index]; // return value
+   }
   public String toString() {
    return Arrays.toString(this.array);
  } //end toString method
+
+ public int getSize() {
+   return this.numberCount;
+ } //end getSize()
 }// end class
