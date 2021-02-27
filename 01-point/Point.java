@@ -61,6 +61,9 @@ public class Point {
         return this.slope(point1) == this.slope(point2);
     }
 
+    public String toString() {
+        return  ("The midpoint is (" + this.x + ", " + this.y + ")");
+    }
 
 
 }
