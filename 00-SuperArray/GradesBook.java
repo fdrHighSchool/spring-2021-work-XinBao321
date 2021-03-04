@@ -42,7 +42,7 @@ import java.util.Arrays;
 
     public int calculateExams(){
       int sum = 0;
-
+      //Add the numbers inside the superarray and caculate the average for exams
       for(int i = 0; i < this.exams.getSize(); i++){
          sum += this.exams.getValue(i);
          //System.out.println(sum);
@@ -53,6 +53,7 @@ import java.util.Arrays;
     } //end calculateExams
 
     public int getHighestExams(){
+      //for loop that checks for the highest grade inside the superarray and return it
       int highestGrade = this.exams.getValue(1);
        for(int i = 0; i < this.exams.getSize(); i++ ){
         for(int grade = this.exams.getValue(0); grade < 10; grade++){

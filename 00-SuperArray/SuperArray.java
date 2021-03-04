@@ -28,7 +28,7 @@ import java.util.Arrays;
       }
     }
     //Second case occur when the array is filled up and need to make a new one
-      int [] array2 = new int[array.length + 1];
+      int [] array2 = new int[array.length + 5];
         for(int i = 0; i < array.length; i++){
          array2[i] = array[i];
       }
@@ -38,7 +38,7 @@ import java.util.Arrays;
     } //end first add method
 
   public void add(int index, int val){
-    int []array2 = new int[array.length + 1];
+    int []array2 = new int[array.length + 5];
 
         for (int i = 0; i < index; i++) {
             array2[i] = array[i];
@@ -94,6 +94,7 @@ import java.util.Arrays;
  } //end toString method
 
  public int getSize() {
+   //the array.length method for the superarray
    return this.numberCount;
  } //end getSize()
 }// end class
