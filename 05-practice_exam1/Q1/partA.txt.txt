@@ -1,0 +1,19 @@
+private String recombine(String word1, String word2){
+   int index = 0;
+    String letters;
+    String letters2;
+
+   for(int i = 0; i < word1.length(); i++){
+    for(int f = 0; f < word2.length() - 1; f++){
+      index++;
+        if(index == word1.length(){
+	letters = wordArr[i] 	
+    }
+    if(index == word2.legnth(){
+    letters2 = wordArr[f];
+}
+}
+	
+}
+	return letters + letters2;
+}
