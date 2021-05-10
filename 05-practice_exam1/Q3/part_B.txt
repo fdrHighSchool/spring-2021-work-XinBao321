@@ -1,0 +1,12 @@
+public boolean updateAllTemps(double tolerance) {
+  double[][] cool = temps;
+  for (int row = 1; row < news.length - 1; row++) {
+    for (int col = 1; col < news[row].length - 1; col++) {
+      cool[row][col] = computeTemp(row, col);
+      if (cool[row][col] - temps[row][col]) < tolerance) {
+        return true;
+      } //end if
+    } //end col
+  } //end row
+  return false;
+} //end updateAllTemps()
