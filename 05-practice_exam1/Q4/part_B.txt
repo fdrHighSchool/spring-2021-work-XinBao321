@@ -1,6 +1,6 @@
 public void recordScores(int [] stuScores){
 	for(int i = 0; i < stuScores.size(); i++){
-record(stuScores);
-}
+record(stuScores); 
+}//end for loop
 
 }
