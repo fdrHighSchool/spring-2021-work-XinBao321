@@ -1,0 +1,14 @@
+public boolean record(int score){
+
+	for(int i = 0;i < scoreList.size(); i++){
+ if(score < scoreList.get(k).getScore()){
+ score.add(k,score);
+ return true;
+}
+else if(score == scoreList.get(k).getScore()){
+  scoreList.get(k).increment();
+}
+
+}
+return true;
+}
