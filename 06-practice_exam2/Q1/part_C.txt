@@ -1,0 +1,13 @@
+public static double propLong(int n ){
+ int countSequences = 0;
+  for(int i = 0; i < n; i++){
+      boolean isLong = isLongSeq(i);
+  if(isLong == true){
+    countSequences++;
+
+}
+
+}
+ return (double) countSequences / n;
+
+}
