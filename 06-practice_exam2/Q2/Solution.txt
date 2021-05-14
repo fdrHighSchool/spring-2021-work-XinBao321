@@ -1,0 +1,25 @@
+public class GameSpinner{
+ private int currentRun;
+ private int spin;
+ private int sectors;
+	public GameSpinner(int countSectors){
+           this.sectors = countSectors;
+           this.spin = 0;
+	   this.currentRun = 0;
+}
+	public int currentRun(){
+      	  	return this.currentRun;
+}
+	public int spin(int countSectors){
+		int gameSpinner = (int)(Math.random()*(countSectors)+1);
+		if(gameSpinner == countSectors){
+	this.currentRun++;
+}
+  else{
+	this.spin = sectors;
+        countSectors = 0;
+}
+  
+}
+  return this.spin;
+}
