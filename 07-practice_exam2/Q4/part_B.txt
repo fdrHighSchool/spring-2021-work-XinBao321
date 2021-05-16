@@ -1,0 +1,11 @@
+public static int [][] resize(int [][] array2D){
+	int [][] array = new array [array2D.length];
+	for(int i = 0; i < array2D.length(); i++){
+	if(array2D[i].isNonZeroRow() == true）{
+    for(int f = array2D.numNonZeroRows(); f < array2D.length(); f++){
+      int temp = array[f];
+}
+}
+}
+  return array;
+}

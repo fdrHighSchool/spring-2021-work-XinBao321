@@ -1,0 +1,11 @@
+public String findBetterGuess(String guess1, String guess2){
+	if(guess1.scoreGuess() > guess2.scoresGuess()){
+	return guess1;
+}
+ if(guess2.scoreGuess() > guess1.scoreGuess()){
+	return guess2;
+}
+  else{
+
+  return guess1;
+}

@@ -1,0 +1,35 @@
+public class CombinedTable(){
+	private int viewQuality;
+	private int height;
+	private int singleTable1;
+	private int singleTable2;
+
+ public void combinedTable( singleTable1,  singleTable2){
+
+	int result = singleTable1 + singleTable2 - 2;
+      
+}
+ public boolean canSeat(int seats){
+   boolean canSeat = false;
+	if(combineTable(singleTable1, singleTable2) > seats){
+	return canSeat == true;
+}
+else {
+return  canSeat == false;
+}
+  return canSeat;  
+}
+
+ public double getDesirability(heights, viewQuality, singleTable1, singleTable2){
+	double average = 0;
+if(singleTable1 == singleTable2){
+	 average = (singleTable1 + singleTable1) / 2;
+}
+ if(singleTable1 != singleTable2){
+	average =  (singleTable1 + singleTable1) / 2;
+          average -= 10;
+}	
+
+ return average;
+}
+}

@@ -1,0 +1,13 @@
+public void addMembers(String [] names, int gradYear){
+    //share same gradYear and good standing add to memberList
+
+	for(int i = 0; i < names.size(); i++){
+	if(names[i].equals(memberList.getGradYear()){
+     if(names[i].inGoodStand()== true && gradYear == names[i].getGradyear){
+    memberList.add(names[i];
+}
+} 
+
+}
+     
+}

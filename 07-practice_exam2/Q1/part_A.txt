@@ -1,0 +1,23 @@
+public int scoreGuess(String guess){
+	int countSubstring = 0;
+        int squareLength = 0;
+        int totalScores = 0;
+   String [] array = new string [guess];
+    boolean true;
+
+  for(int i = 0; i < guess.length(); i++){
+	if(array[i] == substring(0, guess.legnth()){
+	countSubstring++;
+	true = true;
+        
+}
+    else if(countSubstring > 0 && true == true){
+	squareLength++;
+        squareLength *= squareLength;
+}	
+}
+	int result = countSubstring * squareLength;
+return result;
+
+
+}
